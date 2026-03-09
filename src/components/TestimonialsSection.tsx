@@ -88,7 +88,7 @@ const TestimonialsSection = () => {
                             <CarouselItem key={testimonial.id} className="pl-8 md:basis-1/2 lg:basis-1/3">
                                 <div className="bg-white border border-gray-100 shadow-xl shadow-gray-100/50 rounded-[2rem] p-10 h-full flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300">
                                     <div>
-                                        <h3 className="font-display text-xl md:text-2xl mb-6 leading-tight">
+                                        <h3 className="font-body font-semibold text-lg md:text-xl mb-6 leading-tight">
                                             {testimonial.title}
                                         </h3>
                                         <p className="font-body text-muted-foreground leading-relaxed mb-8">
@@ -110,7 +110,7 @@ const TestimonialsSection = () => {
 
                                         <div className="flex items-center gap-2 text-muted-foreground opacity-70">
                                             <testimonial.logo className="h-5 w-5" />
-                                            <span className="font-display font-bold text-sm">{testimonial.company}</span>
+                                            <span className="font-body font-semibold text-sm">{testimonial.company}</span>
                                         </div>
                                     </div>
                                 </div>

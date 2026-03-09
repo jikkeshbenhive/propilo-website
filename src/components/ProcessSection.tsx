@@ -33,7 +33,7 @@ const ProcessSection = () => {
 
             <div className="max-w-[1200px] mx-auto relative z-10">
                 <ScrollSection>
-                    <h2 className="text-center font-display text-4xl md:text-5xl lg:text-5xl text-foreground mb-24 max-w-3xl mx-auto leading-tight">
+                    <h2 className="text-center font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-24 max-w-3xl mx-auto leading-tight">
                         A smarter way to solve industrial challenges
                     </h2>
                 </ScrollSection>
@@ -56,7 +56,7 @@ const ProcessSection = () => {
                                         <span className="relative z-10 pr-2">{step.id}</span>
                                     </div>
 
-                                    <h3 className="font-display text-2xl mb-4 text-foreground">
+                                    <h3 className="font-body font-semibold text-xl mb-4 text-foreground">
                                         {step.title}
                                     </h3>
                                     <p className="font-body text-muted-foreground leading-relaxed max-w-xs text-sm">

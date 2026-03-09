@@ -1,6 +1,6 @@
-
 import { Facebook, Instagram, Linkedin, Twitter, Youtube, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo/propilo-header.png";
 
 
 const Footer = () => {
@@ -35,14 +35,14 @@ const Footer = () => {
                 {/* PROPER IMPLEMENTATION OF TOP LEFT TAB */}
                 <div className="absolute -top-[1px] left-0">
                     <div className="bg-background pr-8 py-6 rounded-br-[2rem] relative z-20">
-                        <span className="text-3xl font-display italic tracking-wide font-bold text-foreground pl-4">Propilo</span>
+                        <img src={logo} alt="Propilo" className="h-10 md:h-12 w-auto object-contain pl-4" />
                         {/* Curve Connector */}
                     </div>
                 </div>
 
                 {/* Top Left Overlay Logic for "Propilo" */}
                 <div className="absolute top-0 left-0 bg-background pr-10 pb-6 rounded-br-[2.5rem] z-10">
-                    <span className="text-3xl font-display italic tracking-wide font-bold text-foreground">Propilo</span>
+                    <img src={logo} alt="Propilo" className="h-10 md:h-12 w-auto object-contain" />
                 </div>
 
                 {/* Bottom Right Overlay Logic for "Designed By" */}
@@ -58,7 +58,7 @@ const Footer = () => {
                         <div className="flex flex-col md:flex-row gap-16 md:gap-24">
                             {/* Pages */}
                             <div className="flex flex-col gap-4">
-                                <h4 className="font-display text-2xl mb-4">Pages</h4>
+                                <h4 className="font-body font-semibold text-lg mb-4">Pages</h4>
                                 {pageLinks.map(link => (
                                     <Link key={link.name} to={link.href} className="text-muted-foreground hover:text-primary-foreground transition-colors">
                                         {link.name}
@@ -68,7 +68,7 @@ const Footer = () => {
 
                             {/* Utility */}
                             <div className="flex flex-col gap-4">
-                                <h4 className="font-display text-2xl mb-4">Utility</h4>
+                                <h4 className="font-body font-semibold text-lg mb-4">Utility</h4>
                                 {utilityLinks.map(link => (
                                     <a key={link.name} href={link.href} className="text-muted-foreground hover:text-primary-foreground transition-colors">
                                         {link.name}

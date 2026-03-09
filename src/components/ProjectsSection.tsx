@@ -1,7 +1,8 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import voiceAi from "@/assets/products/voice ai.png";
+import voiceAi from "@/assets/products/Realtime Voice AI.png";
 import slugTalk from "@/assets/products/slug talk.png";
+import propiloAi from "@/assets/products/voice ai.png";
 
 
 const projects = [
@@ -19,20 +20,48 @@ const projects = [
         image: slugTalk,
         description: "The ultimate voice-powered screenplay writer, turning your spoken ideas into professional scripts instantly.",
     },
+    {
+        id: 3,
+        title: "Propilo Dynamics",
+        category: "Business Automation",
+        image: propiloAi,
+        description: "Intelligent automation tools that continuously optimize your workflows and scale with your enterprise needs.",
+    },
 ];
 
 const ProjectsSection = () => {
     const targetRef = useRef<HTMLDivElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: targetRef,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
+    const [scrollRange, setScrollRange] = useState(0);
+
+    useEffect(() => {
+        const updateRange = () => {
+            if (containerRef.current) {
+                const range = containerRef.current.scrollWidth - window.innerWidth;
+                setScrollRange(range > 0 ? range : 0);
+            }
+        };
+
+        updateRange();
+        window.addEventListener("resize", updateRange);
+        const timeoutId = setTimeout(updateRange, 150);
+
+        return () => {
+            window.removeEventListener("resize", updateRange);
+            clearTimeout(timeoutId);
+        };
+    }, []);
+
+    const x = useTransform(scrollYProgress, [0, 1], [0, -scrollRange]);
 
     return (
-        <section ref={targetRef} className="relative h-[300vh] bg-background">
+        <section ref={targetRef} className="relative h-[400vh] bg-background">
             <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-                <motion.div style={{ x }} className="flex gap-4 p-4 md:gap-16 md:p-16 text-foreground">
+                <motion.div ref={containerRef} style={{ x }} className="flex gap-4 p-4 md:gap-16 md:p-16 text-foreground w-max">
                     {/* Header Card */}
                     <div className="h-[70vh] w-[90vw] md:w-[40vw] flex flex-col justify-center px-8 md:px-12 flex-shrink-0">
                         <h2 className="font-display text-6xl md:text-8xl lg:text-9xl mb-8 leading-none">
@@ -69,7 +98,7 @@ const ProjectsSection = () => {
                                 <span className="font-body text-sm md:text-md font-bold uppercase tracking-wider text-destructive mb-2">
                                     {project.category}
                                 </span>
-                                <h3 className="font-display text-4xl md:text-6xl text-primary-foreground mb-4">
+                                <h3 className="font-body font-bold text-3xl md:text-4xl text-primary-foreground mb-4">
                                     {project.title}
                                 </h3>
                                 <p className="font-body text-muted/80 max-w-lg text-lg">

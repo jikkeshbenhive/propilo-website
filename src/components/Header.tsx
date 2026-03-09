@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight, Menu, X, ChevronDown } from "lucide-react";
+import logo from "@/assets/logo/propilo-header.png";
 
 const serviceLinks = [
   { name: "Brand Engineering & Identity", href: "/services/brand-engineering" },
@@ -13,8 +14,6 @@ const serviceLinks = [
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
 ];
 
 const Header = () => {
@@ -48,8 +47,8 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-display italic text-foreground tracking-wide">
-          Propilo
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="Propilo" className="h-8 md:h-10 w-auto object-contain" />
         </Link>
 
         {/* Desktop Navigation */}

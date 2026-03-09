@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&family=Michroma&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -111,14 +111,8 @@
     @apply bg-background text-foreground font-body antialiased;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-display);
-  }
+  /* Bebas Neue is only applied via the .font-display utility class.
+     All headings default to Inter (font-body) for consistency. */
 
   html {
     scroll-behavior: smooth;

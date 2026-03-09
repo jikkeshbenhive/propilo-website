@@ -14,6 +14,7 @@ import AIAgents from "./pages/AIAgents";
 import WorkflowAutomation from "./pages/WorkflowAutomation";
 import AIStrategy from "./pages/AIStrategy";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />

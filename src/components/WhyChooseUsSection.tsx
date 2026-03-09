@@ -38,7 +38,7 @@ const WhyChooseUsSection = () => {
                         <div className="bg-card rounded-2xl p-8 h-full shadow-sm hover:shadow-md transition-shadow border border-border/50">
                             <div className="flex items-center gap-3 mb-6">
                                 <Sparkles className="w-6 h-6 text-primary" />
-                                <h3 className="font-display text-xl">Deep industry expertise</h3>
+                                <h3 className="font-body font-semibold text-lg">Deep industry expertise</h3>
                             </div>
                             <p className="font-body text-muted-foreground leading-relaxed">
                                 Real-world understanding of factory environments.
@@ -51,7 +51,7 @@ const WhyChooseUsSection = () => {
                         <div className="bg-card rounded-2xl p-8 h-full shadow-sm hover:shadow-md transition-shadow border border-border/50">
                             <div className="flex items-center gap-3 mb-6">
                                 <Network className="w-6 h-6 text-primary" />
-                                <h3 className="font-display text-xl">End-to-End Support</h3>
+                                <h3 className="font-body font-semibold text-lg">End-to-End Support</h3>
                             </div>
                             <p className="font-body text-muted-foreground leading-relaxed">
                                 Guidance from planning to full execution.
@@ -64,7 +64,7 @@ const WhyChooseUsSection = () => {
                         <div className="bg-card rounded-2xl p-8 h-full shadow-sm hover:shadow-md transition-shadow border border-border/50">
                             <div className="flex items-center gap-3 mb-6">
                                 <Zap className="w-6 h-6 text-primary" />
-                                <h3 className="font-display text-xl">Smart Implementation</h3>
+                                <h3 className="font-body font-semibold text-lg">Smart Implementation</h3>
                             </div>
                             <p className="font-body text-muted-foreground leading-relaxed">
                                 Minimal disruption. Maximum performance.
@@ -72,35 +72,6 @@ const WhyChooseUsSection = () => {
                         </div>
                     </ScrollSection>
                 </div>
-
-                {/* Case Study Card */}
-                <ScrollSection delay={0.4}>
-                    <div className="bg-card rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow border border-border/50 flex flex-col md:flex-row gap-8 items-center">
-                        <div className="w-full md:w-48 h-32 md:h-32 rounded-lg overflow-hidden flex-shrink-0 bg-gradient-to-br from-orange-300 to-purple-400 relative group">
-                            {/* Abstract decorative image placeholder */}
-                            <div className="absolute inset-0 flex items-center justify-center opacity-80 mix-blend-overlay">
-                                <div className="w-16 h-16 border-2 border-white rounded-full flex items-center justify-center">
-                                    <div className="w-12 h-12 border border-white/50 rounded-full" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="flex-1 text-center md:text-left">
-                            <h3 className="font-display text-xl md:text-2xl mb-2">
-                                Supply chain optimization – Agricultural machinery
-                            </h3>
-                            <p className="font-body text-muted-foreground text-sm md:text-base mb-0">
-                                We optimized the supply chain for a leading agricultural machinery manufacturer by integrating advanced planning tools and real-time inventory tracking.
-                            </p>
-                        </div>
-
-                        <div className="flex-shrink-0">
-                            <a href="#" className="inline-flex items-center font-medium text-primary hover:text-primary/80 transition-colors border-b border-primary/30 hover:border-primary pb-0.5">
-                                Read case study
-                            </a>
-                        </div>
-                    </div>
-                </ScrollSection>
 
             </div>
 

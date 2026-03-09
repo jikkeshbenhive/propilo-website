@@ -128,22 +128,15 @@ const Services = () => {
                                                 {service.description}
                                             </p>
 
-                                            {/* Categories */}
-                                            <div className="flex flex-wrap gap-2 mb-4">
-                                                {service.categories.map((cat) => (
-                                                    <span
-                                                        key={cat}
-                                                        className="px-3 py-1.5 border border-border rounded-lg text-xs font-medium text-muted-foreground"
-                                                    >
-                                                        {cat}
-                                                    </span>
-                                                ))}
-                                            </div>
-
-                                            {/* Learn More */}
-                                            <div className="flex items-center gap-2 text-sm font-medium text-foreground group-hover:text-destructive transition-colors">
-                                                Learn more
-                                                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                            {/* Action Icon */}
+                                            <div className="flex justify-between items-center mt-4 pt-4 border-t border-border/50">
+                                                <span className="text-sm font-medium text-foreground group-hover:text-destructive transition-colors">
+                                                    Learn more
+                                                </span>
+                                                <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center group-hover:bg-destructive group-hover:border-destructive overflow-hidden relative transition-colors duration-300">
+                                                    <ArrowUpRight className="w-5 h-5 text-foreground group-hover:text-destructive-foreground absolute transition-all duration-300 group-hover:translate-x-8 group-hover:-translate-y-8" />
+                                                    <ArrowUpRight className="w-5 h-5 text-destructive-foreground absolute -translate-x-8 translate-y-8 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0" />
+                                                </div>
                                             </div>
                                         </div>
                                     </motion.div>

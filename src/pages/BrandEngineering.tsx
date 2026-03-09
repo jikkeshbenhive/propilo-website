@@ -48,7 +48,7 @@ const BrandEngineering = () => {
                         </div>
                     </ScrollSection>
                     <ScrollSection delay={0.1}>
-                        <h1 className="font-display text-6xl md:text-8xl lg:text-9xl leading-[0.9] text-foreground mb-8">
+                        <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-foreground mb-8">
                             Brand Engineering
                             <br />
                             & Identity

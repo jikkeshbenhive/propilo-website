@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ScrollSection from "./ScrollSection";
+import { ArrowUpRight } from "lucide-react";
+
+// import images
+import branding1 from "@/assets/home/service/branding/1.jpg";
+import branding2 from "@/assets/home/service/branding/2.jpg";
+import branding3 from "@/assets/home/service/branding/3.avif";
+
+import ai1 from "@/assets/home/service/AIAgents/ai-gaining-humanoid-form-inside-cyberspace-waving-hand-saluting-programmer.jpg";
+import ai2 from "@/assets/home/service/AIAgents/self-aware-artificial-intelligence-becoming-alive-saluting-it-professional.jpg";
 
 const services = [
   {
@@ -10,9 +19,9 @@ const services = [
     categories: ["AI Audit", "Brand", "Visual"],
     slug: "/services/brand-engineering",
     images: [
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      "https://images.unsplash.com/photo-1558655146-d09347e0c766?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      "https://images.unsplash.com/photo-1626785774583-b63d04f2dbe1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      branding3,
+      branding2,
+      branding1,
     ]
   },
   {
@@ -34,9 +43,9 @@ const services = [
     categories: ["AI Agents", "RAG", "LLM"],
     slug: "/services/ai-agents",
     images: [
-      "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      ai1,
       "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      ai2,
     ]
   },
   {
@@ -101,7 +110,7 @@ const ServicesSection = () => {
                 >
                   {/* Number */}
                   <div className="md:col-span-1">
-                    <span className="font-display italic text-2xl text-muted-foreground/60">
+                    <span className="font-body font-medium text-2xl text-muted-foreground/60">
                       ({service.number})
                     </span>
                   </div>
@@ -139,26 +148,19 @@ const ServicesSection = () => {
 
                   {/* Content */}
                   <div className="md:col-span-4 pl-0 md:pl-8">
-                    <h3 className="font-display text-4xl mb-4 group-hover:text-destructive transition-colors duration-300">
+                    <h3 className="font-body font-semibold text-2xl mb-4 group-hover:text-destructive transition-colors duration-300">
                       {service.title}
                     </h3>
-                    <p className="font-body text-muted-foreground text-lg mb-6 max-w-sm">
+                    <p className="font-body text-muted-foreground text-base mb-6 max-w-sm">
                       {service.description}
                     </p>
                   </div>
 
-                  {/* Categories */}
-                  <div className="md:col-span-2 flex flex-col items-start gap-4">
-                    <span className="font-body text-lg">Category</span>
-                    <div className="flex flex-wrap gap-2">
-                      {service.categories.map((cat, i) => (
-                        <span
-                          key={i}
-                          className="px-4 py-2 border border-border rounded-lg text-sm font-medium hover:bg-secondary transition-colors cursor-default"
-                        >
-                          {cat}
-                        </span>
-                      ))}
+                  {/* Action Icon */}
+                  <div className="md:col-span-2 flex items-center justify-start md:justify-end mt-4 md:mt-0">
+                    <div className="w-14 h-14 rounded-full border border-border flex items-center justify-center group-hover:bg-destructive group-hover:border-destructive overflow-hidden relative transition-colors duration-300">
+                      <ArrowUpRight className="w-6 h-6 text-foreground group-hover:text-destructive-foreground absolute transition-all duration-300 group-hover:translate-x-10 group-hover:-translate-y-10" />
+                      <ArrowUpRight className="w-6 h-6 text-destructive-foreground absolute -translate-x-10 translate-y-10 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0" />
                     </div>
                   </div>
 
